@@ -6,7 +6,7 @@
 
   <!-- SEO -->
   <title>Résidence Étudiante Limoges – Location en Résidence Étudiante 87 | residenceetudiantelimoges.fr</title>
-  <meta name="description" content="Trouvez votre résidence étudiante à Limoges : University Meissonier, University Dutreix et EMagine à Isle. Plus de 450 logements éligibles CAF ou ALS. Gérés par Begip, agence spécialiste du logement étudiant à Limoges depuis plus de 20 ans." />
+  <meta name="description" content="Trouvez votre résidence étudiante à Limoges : University Meissonier, University Dutreix et EMagine à Isle. Plus de 450 logements éligibles CAF ou ALS. Gérés par Begip, agence spécialiste du logement étudiant à Limoges depuis plus de 30 ans." />
   <meta name="keywords" content="résidence étudiante Limoges, résidence étudiant Limoges, logement étudiant Limoges, studio résidence Limoges 87, résidence universitaire Limoges, University Meissonier, University Dutreix, EMagine Isle, Begip Limoges, CAF Limoges étudiant" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://residenceetudiantelimoges.fr/" />
@@ -84,6 +84,7 @@
       font-weight: 800; font-size: 1.05rem;
       color: var(--terracotta);
       text-decoration: none; letter-spacing: .02em;
+      white-space: nowrap;
     }
     .nav-logo span { color: rgba(255,255,255,.55); font-weight: 400; }
 
@@ -639,8 +640,9 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
-      nav { padding: 14px 24px; }
-      .nav-right { gap: 16px; }
+      nav { padding: 14px 20px; }
+      .nav-logo { font-size: .88rem; }
+      .nav-right { gap: 12px; }
       .nav-link:not(.nav-cta) { display: none; }
       .hero { grid-template-columns: 1fr; }
       .hero-right { display: none; }
@@ -661,7 +663,7 @@
 
 <!-- ── NAV ── -->
 <nav>
-  <a href="/" class="nav-logo">résidence<span>étudiant</span>limoges.fr</a>
+  <a href="/" class="nav-logo">résidence<em style="color:var(--terracotta);font-style:normal;">étudiante</em><span>limoges.fr</span></a>
   <div class="nav-right">
     <a href="#residences" class="nav-link">Nos résidences</a>
     <a href="#begip" class="nav-link">Services Begip</a>
@@ -673,7 +675,7 @@
 <!-- ── HERO ── -->
 <section class="hero" id="accueil">
   <div class="hero-left">
-    <div class="hero-tag">Begip — Limoges depuis + de 20 ans</div>
+    <div class="hero-tag">Begip — Limoges depuis + de 30 ans</div>
     <h1>Votre <em>résidence étudiante</em> à Limoges</h1>
     <p class="hero-desc">3 résidences, plus de 450 logements — vides ou avec mise à disposition de meubles — avec des kitchenettes équipées et des services sur place. Éligibles CAF ou ALS selon les résidences. Trouver votre logement étudiant à Limoges avec Begip, c'est simple.</p>
     <div class="hero-actions">
@@ -732,7 +734,7 @@
     <div class="avantages-grid">
       <div class="avantage-card reveal">
         <span class="avantage-icon">🛋️</span>
-        <div class="avantage-title">Logement flexible et équipé</div>
+        <div class="avantage-title">Logement meublé ou non selon disponibilité</div>
         <p class="avantage-desc">Vous choisissez : logement vide ou avec mise à disposition de meubles selon vos préférences. Dans tous les cas, la kitchenette ou cuisine est équipée et des placards aménagés sont inclus.</p>
       </div>
       <div class="avantage-card reveal">
@@ -765,6 +767,11 @@
         <div class="avantage-title">Accompagnement Begip</div>
         <p class="avantage-desc">Honoraires réduits (130 € tout compris pour les étudiants), gestion locale réactive, interlocuteur dédié à l'agence de Limoges.</p>
       </div>
+      <div class="avantage-card reveal">
+        <span class="avantage-icon">🅿️</span>
+        <div class="avantage-title">Parking privé dans chaque résidence</div>
+        <p class="avantage-desc">Chaque résidence dispose d'un parking privé sécurisé. Le stationnement est inclus dans le loyer à University Dutreix. Il est disponible en supplément à University Meissonier et à EMagine.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -774,7 +781,7 @@
   <div class="section-inner">
     <div class="section-tag" style="color: var(--terracotta);">Nos résidences étudiantes</div>
     <h2 class="reveal">3 résidences à <em style="color: var(--terracotta);">Limoges</em> et agglomération</h2>
-    <p class="section-sub reveal">Gérées par Begip ou disponibles à la location via Begip, nos résidences couvrent les principaux pôles universitaires de Limoges : Borie, IUT, CHU et faculté de médecine.</p>
+    <p class="section-sub reveal">Gérées par Begip ou disponibles à la location via Begip, nos résidences couvrent les principaux pôles universitaires de Limoges : campus La Borie (Fac des Sciences & Techniques, IUT, STAPS), CHU et faculté de médecine.</p>
 
     <div class="res-tabs reveal">
       <button class="res-tab active" onclick="showTab('meissonier')" id="tab-meissonier">University Meissonier</button>
@@ -988,7 +995,7 @@
   <div class="section-inner">
     <div class="begip-split">
       <div class="begip-visual">
-        <div class="begip-years">20</div>
+        <div class="begip-years">30</div>
         <div class="begip-since">ans d'expérience</div>
         <div class="begip-since-label">à Limoges et en Haute-Vienne</div>
         <div class="begip-stats-mini">
@@ -1064,12 +1071,6 @@
         <p class="aide-desc">Vous êtes en alternance ou apprentissage ? L'aide Mobili-Jeune d'Action Logement peut vous apporter jusqu'à 100 €/mois supplémentaires.</p>
         <a href="https://mobilijeune.actionlogement.fr" target="_blank" rel="noopener noreferrer" class="aide-link">Demander l'aide →</a>
       </div>
-      <div class="aide-card reveal">
-        <span class="aide-icon">🎓</span>
-        <div class="aide-title">Bourse sur critères sociaux</div>
-        <p class="aide-desc">Les boursiers du CROUS bénéficient souvent d'une exonération ou réduction des frais d'inscription. Couplée à l'APL, c'est une aide considérable.</p>
-        <a href="https://www.crous-limoges.fr" target="_blank" rel="noopener noreferrer" class="aide-link">CROUS Limoges →</a>
-      </div>
     </div>
   </div>
 </section>
@@ -1087,10 +1088,10 @@
         <div class="reseau-card-url">residenceetudiantelimoges.fr</div>
         <p class="reseau-card-desc">Résidences étudiantes à Limoges et Isle</p>
       </a>
-      <a href="https://studio-etudiant.fr" target="_blank" rel="noopener noreferrer" class="reseau-card reveal">
+      <a href="https://www.studio-limoges.fr" target="_blank" rel="noopener noreferrer" class="reseau-card reveal">
         <span class="reseau-card-icon">🛋️</span>
-        <div class="reseau-card-name">Studio Étudiant Limoges</div>
-        <div class="reseau-card-url">studio-etudiant.fr</div>
+        <div class="reseau-card-name">Studio Limoges</div>
+        <div class="reseau-card-url">studio-limoges.fr</div>
         <p class="reseau-card-desc">Studios indépendants meublés ou vides à Limoges</p>
       </a>
       <a href="https://university-meissonier.fr" target="_blank" rel="noopener noreferrer" class="reseau-card reveal">
@@ -1134,15 +1135,19 @@
       </div>
       <div class="faq-item reveal">
         <div class="faq-q" onclick="toggleFaq(this)">Quels sont les avantages d'une résidence étudiante par rapport à une location chez un particulier ? <span class="faq-arrow">▼</span></div>
-        <div class="faq-a">En résidence étudiante, vous bénéficiez d'un logement meublé clé en main, de services communs (laverie, WiFi, salle de sport, espaces détente), d'une sécurité renforcée (contrôle d'accès, interphones) et d'une gestion professionnelle par Begip. Pas de mauvaise surprise sur les charges : tout est inclus dans le loyer. Et les honoraires Begip sont limités à 100 € pour les étudiants.</div>
+        <div class="faq-a">En résidence étudiante, vous bénéficiez d'un logement meublé ou vide selon disponibilité, de services communs (laverie, WiFi à Meissonier, salle de sport, espaces détente), d'une sécurité renforcée (contrôle d'accès, interphones) et d'une gestion professionnelle par Begip. Et les honoraires Begip sont de 130 € tout compris pour les étudiants.</div>
       </div>
       <div class="faq-item reveal">
         <div class="faq-q" onclick="toggleFaq(this)">Y a-t-il des résidences étudiantes à Limoges proches de la faculté de médecine ? <span class="faq-arrow">▼</span></div>
         <div class="faq-a">Oui. La résidence EMagine à Isle est idéalement positionnée pour les étudiants en médecine et les professions de santé, proche du CHU de Limoges. La résidence University Meissonier (quartier La Borie) est également dans un secteur desservi à proximité de la faculté de médecine et de l'école d'infirmières.</div>
       </div>
       <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">Quelle résidence étudiante est la plus proche de la faculté des Sciences de Limoges ? <span class="faq-arrow">▼</span></div>
+        <div class="faq-a">Les deux résidences Begip sont proches de la Faculté des Sciences & Techniques (campus La Borie). University Dutreix (231 rue Armand Dutreix) en est la plus proche, à seulement 5 minutes à pied. University Meissonier (27 chemin d'Antony) est également très bien positionnée, accessible en moins de 15 minutes à pied. Les deux résidences desservent aussi l'IUT du Limousin et le STAPS, situés sur le même campus La Borie.</div>
+      </div>
+      <div class="faq-item reveal">
         <div class="faq-q" onclick="toggleFaq(this)">Comment réserver un logement dans une résidence étudiante Begip à Limoges ? <span class="faq-arrow">▼</span></div>
-        <div class="faq-a">Il vous suffit de nous contacter par téléphone (05 55 33 97 50) ou par email (agence@begip.fr), ou de remplir le formulaire ci-dessous. Begip vous rappelle rapidement pour vous présenter les disponibilités, organiser une visite et constituer votre dossier. Les honoraires sont de 100 € tout compris pour les étudiants, apprentis et alternants.</div>
+        <div class="faq-a">Il vous suffit de nous contacter par téléphone (05 55 33 97 50) ou par email (agence@begip.fr), ou de remplir le formulaire ci-dessous. Begip vous rappelle rapidement pour vous présenter les disponibilités, organiser une visite et constituer votre dossier. Les honoraires sont de 130 € tout compris pour les étudiants, apprentis et alternants.</div>
       </div>
     </div>
   </div>
@@ -1256,11 +1261,11 @@
       <a href="#faq">FAQ</a>
       <a href="https://university-meissonier.fr" target="_blank" rel="noopener noreferrer">Meissonier</a>
       <a href="https://university-dutreix.fr" target="_blank" rel="noopener noreferrer">Dutreix</a>
-      <a href="https://studio-etudiant.fr" target="_blank" rel="noopener noreferrer">Studio-Étudiant.fr</a>
+      <a href="https://www.studio-limoges.fr" target="_blank" rel="noopener noreferrer">Studio-Limoges.fr</a>
       <a href="https://begip.fr" target="_blank" rel="noopener noreferrer">Begip.fr</a>
       <a href="#">Mentions légales</a>
     </div>
-    <div class="footer-copy">© 2025 residenceetudiantelimoges.fr — Un site du réseau Begip Limoges</div>
+    <div class="footer-copy">© 2025 residenceetudiantelimoges.fr — Un site du réseau Begip Limoges — + de 30 ans d'expérience</div>
   </div>
 </footer>
 
