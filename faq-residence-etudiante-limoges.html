@@ -29,7 +29,7 @@
       {
         "@type": "Question",
         "name": "Combien coûte une résidence étudiante à Limoges ?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Les loyers débutent à 350 €/mois charges comprises à University Meissonier (studios de 18 à 31,75 m²) et 378 €/mois CC à University Dutreix (studios de 25 à 29 m²). Avec l'APL ou l'ALS de la CAF, le reste à charge peut être considérablement réduit. Les honoraires Begip sont de 130 € tout compris pour les étudiants." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Les loyers débutent à 350 €/mois charges comprises à University Meissonier (studios de 18 à 31,75 m²), 378 €/mois CC à University Dutreix (studios de 25 à 29 m²), et 340 €/mois CC à E-Magine à Isle (studios 20-25 m²). Avec l'APL ou l'ALS de la CAF, le reste à charge peut être considérablement réduit. Les honoraires Begip sont de 130 € tout compris sur les résidences gérées en direct par l'agence (Meissonier, Dutreix). Pour E-Magine, les honoraires sont précisés à la prise de contact." }
       },
       {
         "@type": "Question",
@@ -54,7 +54,7 @@
       {
         "@type": "Question",
         "name": "Comment réserver un logement dans une résidence étudiante Begip à Limoges ?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Contactez Begip par téléphone (05 55 33 97 50) ou par email (agence@begip.fr), ou remplissez le formulaire sur residenceetudiantelimoges.fr. L'agence vous rappelle rapidement pour organiser une visite. Les honoraires sont de 130 € tout compris (visite, dossier, bail, état des lieux)." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Contactez Begip par téléphone (05 55 33 97 50) ou par email (agence@begip.fr), ou remplissez le formulaire sur residenceetudiantelimoges.fr. L'agence vous rappelle rapidement pour organiser une visite. Les honoraires Begip sont de 130 € tout compris sur les résidences gérées en direct par l'agence (Meissonier, Dutreix). Pour E-Magine, les honoraires sont précisés à la prise de contact." }
       },
       {
         "@type": "Question",
@@ -63,13 +63,8 @@
       },
       {
         "@type": "Question",
-        "name": "Quel est le montant des honoraires Begip ?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Les honoraires Begip pour les étudiants sont de 130 € tout compris. Ce forfait inclut la visite, le montage du dossier, la rédaction du bail et les états des lieux d'entrée et de sortie. Aucun frais caché." }
-      },
-      {
-        "@type": "Question",
-        "name": "Qui gère la résidence E-Magine à Isle ?",
-        "acceptedAnswer": { "@type": "Answer", "text": "La résidence E-Magine est gérée par la société Elyade, basée à Saint-Jean (Haute-Garonne). Begip intervient uniquement pour la location : visite, montage de dossier, signature du bail. Pour toute question de gestion courante, c'est Elyade qui est votre interlocuteur après votre entrée dans les lieux." }
+        "name": "Quels sont les honoraires Begip pour un logement étudiant à Limoges ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sur les résidences gérées en direct par l'agence Begip (University Meissonier, University Dutreix), les honoraires étudiants sont de 130 € tout compris : ce forfait inclut la visite, le montage du dossier, la rédaction du bail et les états des lieux d'entrée et de sortie. Aucun frais caché. Pour la résidence E-Magine, les honoraires sont précisés à la prise de contact." }
       },
       {
         "@type": "Question",
@@ -103,32 +98,38 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Literata:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <style>
     :root {
-      --terracotta: #c4622d;
-      --terracotta-light: #e8845a;
-      --terracotta-pale: #fdf0ea;
-      --dark: #1a1412;
-      --dark-mid: #2d2320;
-      --warm-white: #faf8f5;
-      --text: #2d2320;
-      --muted: #7a6d68;
-      --border: rgba(196,98,45,.15);
-      --radius: 14px;
+      /* Nouvelle charte — Bleu nuit / Doré / Cormorant */
+      --terracotta: #d4a574;
+      --terracotta-light: #e8c896;
+      --terracotta-pale: #f5ede0;
+      --gold-deep: #b88a5a;
+      --dark: #142a47;
+      --dark-mid: #1e3a5f;
+      --night-light: #2c5282;
+      --warm-white: #f7f3ec;
+      --ivory-warm: #efe7d8;
+      --text: #1a1a1a;
+      --muted: #6b6b6b;
+      --border: rgba(30,58,95,.12);
+      --radius: 4px;
     }
+    /* — Charte refonte — */
+    h1 em, h2 em, h3 em { font-style: italic; font-weight: 500; color: var(--terracotta); }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    body { font-family: 'Literata', Georgia, serif; background: var(--warm-white); color: var(--text); overflow-x: hidden; }
+    body { font-family: 'Inter', sans-serif; background: var(--warm-white); color: var(--text); overflow-x: hidden; }
 
     /* NAV */
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 16px 48px; background: rgba(26,20,18,.96); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(196,98,45,.2); animation: slideDown .5s ease both; }
     @keyframes slideDown { from { transform: translateY(-100%); opacity:0; } to { transform: translateY(0); opacity:1; } }
-    .nav-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.05rem; color: var(--terracotta); text-decoration: none; white-space: nowrap; }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-weight: 800; font-size: 1.05rem; color: var(--terracotta); text-decoration: none; white-space: nowrap; }
     .nav-logo span { color: rgba(255,255,255,.55); font-weight: 400; }
     .nav-right { display: flex; align-items: center; gap: 24px; }
-    .nav-link { color: rgba(255,255,255,.6); text-decoration: none; font-family: 'Syne', sans-serif; font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; transition: color .2s; }
+    .nav-link { color: rgba(255,255,255,.6); text-decoration: none; font-family: 'Cormorant Garamond', serif; font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; transition: color .2s; }
     .nav-link:hover { color: var(--terracotta-light); }
     .nav-link.active { color: var(--terracotta); }
     .nav-cta { background: var(--terracotta); color: #fff !important; padding: 9px 22px; border-radius: 50px; font-weight: 600 !important; transition: background .2s, transform .15s !important; }
@@ -140,7 +141,7 @@
     .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
     .mobile-menu { display: none; position: fixed; top: 58px; left: 0; right: 0; background: rgba(26,20,18,.98); backdrop-filter: blur(12px); padding: 20px 24px 28px; flex-direction: column; gap: 4px; border-bottom: 1px solid rgba(196,98,45,.2); z-index: 99; }
     .mobile-menu.open { display: flex; }
-    .mobile-menu a { color: rgba(255,255,255,.8); text-decoration: none; font-family: 'Syne', sans-serif; font-size: .95rem; font-weight: 500; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.06); transition: color .2s; }
+    .mobile-menu a { color: rgba(255,255,255,.8); text-decoration: none; font-family: 'Cormorant Garamond', serif; font-size: .95rem; font-weight: 500; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.06); transition: color .2s; }
     .mobile-menu a:last-child { border-bottom: none; }
     .mobile-menu a:hover { color: var(--terracotta-light); }
     .mobile-menu .mobile-cta { margin-top: 12px; background: var(--terracotta); color: #fff !important; text-align: center; padding: 14px !important; border-radius: 50px; border-bottom: none !important; font-weight: 600 !important; }
@@ -149,15 +150,15 @@
     .page-hero { background: var(--dark); padding: 130px 48px 80px; position: relative; overflow: hidden; }
     .page-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 65% 50% at 75% 40%, rgba(196,98,45,.2) 0%, transparent 70%); }
     .hero-inner { max-width: 900px; margin: 0 auto; position: relative; z-index: 1; text-align: center; }
-    .hero-tag { display: inline-flex; align-items: center; gap: 10px; font-family: 'Syne', sans-serif; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 20px; animation: fadeUp .6s .2s both; }
+    .hero-tag { display: inline-flex; align-items: center; gap: 10px; font-family: 'Cormorant Garamond', serif; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 20px; animation: fadeUp .6s .2s both; }
     .hero-tag::before { content: ''; width: 28px; height: 1px; background: var(--terracotta); }
-    .page-hero h1 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(2rem, 3.5vw, 3rem); color: #fff; line-height: 1.1; margin-bottom: 20px; animation: fadeUp .6s .35s both; }
+    .page-hero h1 { font-family: 'Cormorant Garamond', serif; font-weight: 800; font-size: clamp(2rem, 3.5vw, 3rem); color: #fff; line-height: 1.1; margin-bottom: 20px; animation: fadeUp .6s .35s both; }
     .page-hero h1 em { color: var(--terracotta); font-style: normal; }
     .hero-desc { font-size: 1rem; line-height: 1.75; color: rgba(255,255,255,.6); max-width: 600px; margin: 0 auto; animation: fadeUp .6s .5s both; }
 
     /* BREADCRUMB */
     .breadcrumb { background: var(--dark-mid); padding: 12px 48px; border-bottom: 1px solid rgba(255,255,255,.06); }
-    .breadcrumb-inner { max-width: 1160px; margin: 0 auto; display: flex; align-items: center; gap: 8px; font-family: 'Syne', sans-serif; font-size: .75rem; color: rgba(255,255,255,.4); }
+    .breadcrumb-inner { max-width: 1160px; margin: 0 auto; display: flex; align-items: center; gap: 8px; font-family: 'Cormorant Garamond', serif; font-size: .75rem; color: rgba(255,255,255,.4); }
     .breadcrumb-inner a { color: rgba(255,255,255,.4); text-decoration: none; transition: color .2s; }
     .breadcrumb-inner a:hover { color: var(--terracotta-light); }
     .breadcrumb-inner .sep { color: rgba(255,255,255,.2); }
@@ -166,14 +167,14 @@
     /* SECTIONS */
     section { padding: 80px 48px; }
     .section-inner { max-width: 860px; margin: 0 auto; }
-    .section-tag { font-family: 'Syne', sans-serif; font-size: .72rem; text-transform: uppercase; letter-spacing: .16em; color: var(--terracotta); display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+    .section-tag { font-family: 'Cormorant Garamond', serif; font-size: .72rem; text-transform: uppercase; letter-spacing: .16em; color: var(--terracotta); display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
     .section-tag::before { content: ''; width: 22px; height: 1px; background: var(--terracotta); }
-    h2 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(1.5rem, 2.2vw, 2rem); line-height: 1.12; color: var(--dark); margin-bottom: 10px; }
+    h2 { font-family: 'Cormorant Garamond', serif; font-weight: 800; font-size: clamp(1.5rem, 2.2vw, 2rem); line-height: 1.12; color: var(--dark); margin-bottom: 10px; }
     .section-sub { font-size: 1rem; color: var(--muted); line-height: 1.7; margin-bottom: 40px; }
 
     /* FAQ THÉMATIQUE */
     .faq-theme { margin-bottom: 56px; }
-    .faq-theme-title { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1rem; text-transform: uppercase; letter-spacing: .1em; color: var(--terracotta); display: flex; align-items: center; gap: 10px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+    .faq-theme-title { font-family: 'Cormorant Garamond', serif; font-weight: 800; font-size: 1rem; text-transform: uppercase; letter-spacing: .1em; color: var(--terracotta); display: flex; align-items: center; gap: 10px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
     .faq-theme-title::before { content: ''; width: 22px; height: 2px; background: var(--terracotta); }
     .faq-list { display: flex; flex-direction: column; gap: 10px; }
     .faq-item { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; transition: border-color .2s; }
@@ -181,7 +182,7 @@
     .faq-item.open { border-color: var(--terracotta); }
     .faq-question { width: 100%; text-align: left; padding: 20px 24px; background: none; border: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 16px; transition: background .2s; }
     .faq-question:hover { background: var(--terracotta-pale); }
-    .faq-q-text { font-family: 'Syne', sans-serif; font-weight: 700; font-size: .92rem; color: var(--dark); text-align: left; line-height: 1.4; }
+    .faq-q-text { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: .92rem; color: var(--dark); text-align: left; line-height: 1.4; }
     .faq-arrow { color: var(--terracotta); font-size: 1rem; flex-shrink: 0; transition: transform .3s; }
     .faq-item.open .faq-arrow { transform: rotate(180deg); }
     .faq-answer { max-height: 0; overflow: hidden; transition: max-height .35s ease; }
@@ -198,27 +199,27 @@
     .res-card { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); border-radius: var(--radius); padding: 24px; text-decoration: none; display: block; transition: background .25s, border-color .25s, transform .25s; }
     .res-card:hover { background: rgba(196,98,45,.1); border-color: rgba(196,98,45,.3); transform: translateY(-4px); }
     .res-card-icon { font-size: 1.8rem; display: block; margin-bottom: 12px; }
-    .res-card-name { font-family: 'Syne', sans-serif; font-weight: 700; font-size: .95rem; color: #fff; margin-bottom: 6px; }
+    .res-card-name { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: .95rem; color: #fff; margin-bottom: 6px; }
     .res-card-detail { font-size: .82rem; color: rgba(255,255,255,.45); line-height: 1.5; }
-    .res-card-link { display: inline-flex; align-items: center; gap: 5px; color: var(--terracotta-light); font-family: 'Syne', sans-serif; font-size: .78rem; font-weight: 600; margin-top: 14px; }
+    .res-card-link { display: inline-flex; align-items: center; gap: 5px; color: var(--terracotta-light); font-family: 'Cormorant Garamond', serif; font-size: .78rem; font-weight: 600; margin-top: 14px; }
 
     /* CTA */
     .cta-section { background: linear-gradient(135deg, var(--terracotta) 0%, #a84e22 100%); padding: 72px 48px; text-align: center; }
     .cta-inner { max-width: 640px; margin: 0 auto; }
-    .cta-title { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(1.6rem, 3vw, 2.2rem); color: #fff; margin-bottom: 14px; }
+    .cta-title { font-family: 'Cormorant Garamond', serif; font-weight: 800; font-size: clamp(1.6rem, 3vw, 2.2rem); color: #fff; margin-bottom: 14px; }
     .cta-sub { color: rgba(255,255,255,.8); font-size: 1rem; line-height: 1.7; margin-bottom: 32px; }
     .cta-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-    .btn-white { background: #fff; color: var(--terracotta); padding: 14px 32px; border-radius: 50px; font-family: 'Syne', sans-serif; font-weight: 700; font-size: .88rem; text-decoration: none; transition: transform .15s, box-shadow .2s; }
+    .btn-white { background: #fff; color: var(--terracotta); padding: 14px 32px; border-radius: 50px; font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: .88rem; text-decoration: none; transition: transform .15s, box-shadow .2s; }
     .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
-    .btn-ghost-white { border: 1.5px solid rgba(255,255,255,.5); color: #fff; padding: 14px 32px; border-radius: 50px; font-family: 'Syne', sans-serif; font-size: .88rem; text-decoration: none; transition: border-color .2s, background .2s; }
+    .btn-ghost-white { border: 1.5px solid rgba(255,255,255,.5); color: #fff; padding: 14px 32px; border-radius: 50px; font-family: 'Cormorant Garamond', serif; font-size: .88rem; text-decoration: none; transition: border-color .2s, background .2s; }
     .btn-ghost-white:hover { border-color: #fff; background: rgba(255,255,255,.1); }
 
     /* FOOTER */
     footer { background: #0d0a09; padding: 40px 48px; color: rgba(255,255,255,.4); }
     .footer-inner { max-width: 1160px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
-    .footer-logo { font-family: 'Syne', sans-serif; font-weight: 800; color: var(--terracotta); font-size: 1rem; text-decoration: none; }
+    .footer-logo { font-family: 'Cormorant Garamond', serif; font-weight: 800; color: var(--terracotta); font-size: 1rem; text-decoration: none; }
     .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
-    .footer-links a { color: rgba(255,255,255,.35); text-decoration: none; font-family: 'Syne', sans-serif; font-size: .75rem; letter-spacing: .06em; text-transform: uppercase; transition: color .2s; }
+    .footer-links a { color: rgba(255,255,255,.35); text-decoration: none; font-family: 'Cormorant Garamond', serif; font-size: .75rem; letter-spacing: .06em; text-transform: uppercase; transition: color .2s; }
     .footer-links a:hover { color: var(--terracotta-light); }
     .footer-copy { font-size: .76rem; }
 
@@ -293,17 +294,17 @@
             <span class="faq-arrow">▼</span>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">Les loyers débutent à <strong>350 €/mois charges comprises</strong> à University Meissonier (studios de 18 à 31,75 m²) et à <strong>378 €/mois CC</strong> à University Dutreix (studios de 25 à 29 m²). Avec l'APL ou l'ALS de la CAF, le reste à charge peut être considérablement réduit. Les honoraires d'agence Begip sont de <strong>130 € tout compris</strong> pour les étudiants.</div>
+            <div class="faq-answer-inner">Les loyers débutent à <strong>350 €/mois charges comprises</strong> à University Meissonier (studios de 18 à 31,75 m²), <strong>378 €/mois CC</strong> à University Dutreix (studios de 25 à 29 m²), et <strong>340 €/mois CC</strong> à E-Magine à Isle (studios 20-25 m²). Avec l'APL ou l'ALS de la CAF, le reste à charge peut être considérablement réduit. Les honoraires Begip sont de <strong>130 € tout compris</strong> sur les résidences gérées en direct par l'agence (Meissonier, Dutreix). Pour E-Magine, les honoraires sont précisés à la prise de contact.</div>
           </div>
         </div>
 
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
-            <span class="faq-q-text">Quel est le montant des honoraires Begip pour un étudiant ?</span>
+            <span class="faq-q-text">Quels sont les honoraires Begip pour un logement étudiant à Limoges ?</span>
             <span class="faq-arrow">▼</span>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">Les honoraires Begip pour les étudiants sont de <strong>130 € tout compris</strong>. Ce forfait inclut la visite du logement, le montage du dossier, la rédaction du bail et les états des lieux d'entrée et de sortie. Aucun frais caché. C'est l'un des tarifs les plus compétitifs de Limoges pour un logement étudiant en résidence.</div>
+            <div class="faq-answer-inner">Sur les résidences gérées en direct par l'agence Begip (University Meissonier, University Dutreix), les honoraires étudiants sont de <strong>130 € tout compris</strong>. Ce forfait inclut la visite du logement, le montage du dossier, la rédaction du bail et les états des lieux d'entrée et de sortie. Aucun frais caché — c'est l'un des tarifs les plus compétitifs de Limoges. Pour la résidence E-Magine à Isle, les honoraires sont précisés à la prise de contact.</div>
           </div>
         </div>
 
@@ -417,7 +418,7 @@
             <span class="faq-arrow">▼</span>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">La résidence <strong>E-Magine</strong>, située à Isle dans l'agglomération de Limoges, est la plus proche du CHU. Elle est idéalement positionnée pour les étudiants en médecine, pharmacie, IFSI et professions de santé. Les studios y sont disponibles à la location via l'agence Begip — la gestion courante est assurée par la société <strong>Elyade</strong> (Saint-Jean, 31).</div>
+            <div class="faq-answer-inner">La résidence <strong>E-Magine</strong>, située à Isle dans l'agglomération de Limoges, est la plus proche du CHU Dupuytren (5 minutes à pied). Elle est idéalement positionnée pour les étudiants en médecine, pharmacie, IFSI et professions de santé, ainsi que pour les internes en stage au CHU. Les studios y sont disponibles à la location via l'agence Begip — pour en savoir plus, consultez le site <a href="https://emagine-residence.fr" target="_blank" rel="noopener noreferrer">emagine-residence.fr</a>.</div>
           </div>
         </div>
 
@@ -435,7 +436,7 @@
             <span class="faq-arrow">▼</span>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">Contactez Begip par téléphone au <a href="tel:0555339750">05 55 33 97 50</a>, par email à <a href="mailto:agence@begip.fr">agence@begip.fr</a>, ou remplissez le formulaire sur ce site. L'agence vous rappelle rapidement pour vous présenter les disponibilités et organiser une visite. Les honoraires sont de <strong>130 € tout compris</strong> (visite, dossier, bail, état des lieux d'entrée et de sortie).</div>
+            <div class="faq-answer-inner">Contactez Begip par téléphone au <a href="tel:0555339750">05 55 33 97 50</a>, par email à <a href="mailto:agence@begip.fr">agence@begip.fr</a>, ou remplissez le formulaire sur ce site. L'agence vous rappelle rapidement pour vous présenter les disponibilités et organiser une visite. Les honoraires Begip sont de <strong>130 € tout compris</strong> sur les résidences gérées en direct par l'agence (visite, dossier, bail, état des lieux). Pour E-Magine, les honoraires sont précisés à la prise de contact.</div>
           </div>
         </div>
 
@@ -446,16 +447,6 @@
           </button>
           <div class="faq-answer">
             <div class="faq-answer-inner">Oui, absolument. L'agence Begip organise des <strong>visites sur rendez-vous</strong> pour toutes les résidences. Contactez-nous au <a href="tel:0555339750">05 55 33 97 50</a> ou à <a href="mailto:agence@begip.fr">agence@begip.fr</a> pour planifier votre visite, même si vous êtes encore loin de Limoges.</div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            <span class="faq-q-text">Qui gère la résidence E-Magine à Isle : Begip ou Elyade ?</span>
-            <span class="faq-arrow">▼</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">La résidence E-Magine est <strong>gérée par la société Elyade</strong>, basée à Saint-Jean (Haute-Garonne, 31). L'agence <strong>Begip assure uniquement la location</strong> : visite, montage de dossier, signature du bail. Après votre entrée dans les lieux, pour toute question de gestion courante (entretien, chauffage, parties communes...), Elyade est votre interlocuteur direct.</div>
           </div>
         </div>
 
