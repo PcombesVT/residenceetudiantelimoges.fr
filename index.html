@@ -1223,6 +1223,7 @@
       <div class="form-group"><label for="message">Votre message</label><textarea id="message" name="message" rows="4" placeholder="Précisez vos besoins : résidence étudiante souhaitée, budget, questions particulières..."></textarea></div>
       <input type="text" name="_gotcha" style="display:none" tabindex="-1" aria-hidden="true" />
       <input type="hidden" name="_subject" value="Nouvelle demande résidence étudiante — residenceetudiantelimoges.fr" />
+      <input type="hidden" name="source_site" value="residenceetudiantelimoges.fr" />
       <button type="submit" class="form-submit" id="btn-submit-contact">Envoyer ma demande →</button>
       <p class="form-legal">Vos données sont transmises uniquement à l'agence Begip Limoges et ne sont pas partagées à des tiers. Conformément au RGPD, vous disposez d'un droit d'accès et de suppression en contactant agence@begip.fr.</p>
     </form>
@@ -1361,6 +1362,16 @@
   document.addEventListener('click', (e) => {
     if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) closeMenu();
   });
+
+  // ── Double envoi : Formspree (email) + Google Sheets (BDD) ──
+  const APPS_SCRIPT_URL = 'COLLER_ICI_URL_APPS_SCRIPT';
+  const residenceForm = document.getElementById('contact-form');
+  if (residenceForm && APPS_SCRIPT_URL !== 'COLLER_ICI_URL_APPS_SCRIPT') {
+    residenceForm.addEventListener('submit', function() {
+      const formData = new FormData(residenceForm);
+      fetch(APPS_SCRIPT_URL, { method: 'POST', body: formData }).catch(() => {});
+    });
+  }
 </script>
 </body>
 </html>
