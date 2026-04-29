@@ -555,10 +555,10 @@
     .res-main-body { padding: 28px; }
     .res-main-desc { font-size: .95rem; color: rgba(255,255,255,.85); line-height: 1.75; margin-bottom: 24px; }
     .res-typologies { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
-    .typo-row { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: rgba(255,255,255,.08); border: 1px solid rgba(212,165,116,.2); border-radius: 6px; }
+    .typo-row { display: grid; grid-template-columns: 1fr 120px 1fr; align-items: center; padding: 12px 16px; background: rgba(255,255,255,.08); border: 1px solid rgba(212,165,116,.2); border-radius: 6px; }
     .typo-name { font-family: 'Cormorant Garamond', serif; font-size: .82rem; color: rgba(255,255,255,.8); font-weight: 600; }
-    .typo-surface { font-size: .78rem; color: rgba(255,255,255,.45); }
-    .typo-price { font-family: 'Cormorant Garamond', serif; font-size: .9rem; font-weight: 700; color: var(--terracotta-light); }
+    .typo-surface { font-size: .78rem; color: rgba(255,255,255,.45); text-align: center; }
+    .typo-price { font-family: 'Cormorant Garamond', serif; font-size: .9rem; font-weight: 700; color: var(--terracotta-light); text-align: right; }
     .res-services-list { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
     .res-svc { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.08); color: rgba(255,255,255,.65); font-family: 'Cormorant Garamond', serif; font-size: .72rem; padding: 5px 12px; border-radius: 50px; }
     .res-cta-link { display: inline-flex; align-items: center; gap: 8px; background: var(--terracotta); color: #fff; padding: 12px 24px; border-radius: 50px; font-family: 'Cormorant Garamond', serif; font-size: .82rem; font-weight: 600; text-decoration: none; letter-spacing: .04em; transition: background .2s, transform .15s; }
@@ -572,7 +572,7 @@
     .campus-item::before { content: '🎓'; font-size: .8rem; flex-shrink: 0; }
     .res-transport-list { display: flex; flex-direction: column; gap: 8px; }
     .transport-item { font-size: .83rem; color: rgba(255,255,255,.55); line-height: 1.5; }
-    .res-note { background: rgba(0,0,0,.25); border: 1px solid rgba(212,165,116,.35); border-left: 3px solid var(--terracotta); border-radius: 6px; padding: 18px 20px; font-size: .9rem; color: rgba(255,255,255,.88); line-height: 1.65; }
+    .res-note { background: rgba(30,58,95,.6); border: 1px solid rgba(212,165,116,.35); border-left: 3px solid var(--terracotta); border-radius: 6px; padding: 18px 20px; font-size: .9rem; color: rgba(255,255,255,.88); line-height: 1.65; }
     .res-note strong { color: var(--terracotta); display: block; margin-bottom: 6px; font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 600; }
     .emagine-note { background: rgba(255,255,255,.04); border: 1px dashed rgba(255,255,255,.15); border-radius: 10px; padding: 16px; margin-top: 16px; font-size: .82rem; color: rgba(255,255,255,.5); line-height: 1.6; font-style: italic; }
 
@@ -691,8 +691,8 @@
     /* ── BANDEAU ANNONCE ── */
     .announce-bar {
       position: fixed; top: 0; left: 0; right: 0; z-index: 101;
-      background: var(--dark);
-      border-bottom: 1px solid rgba(212,165,116,.25);
+      background: #1a4a7a;
+      border-bottom: 1px solid rgba(212,165,116,.4);
       height: 42px;
       display: flex; align-items: center; justify-content: center;
       overflow: hidden;
@@ -807,17 +807,17 @@
       <div class="res-mini-list">
         <a href="#residences" class="res-mini-item" onclick="showTab('meissonier')" title="Découvrir la résidence University Meissonier à Limoges">
           <span class="res-mini-icon" aria-hidden="true">🏛️</span>
-          <span class="res-mini-text"><strong>University Meissonier</strong>Quartier La Borie — studios 18-25 m², T1bis & T3</span>
+          <span class="res-mini-text"><strong>University Meissonier</strong>Quartier La Borie — studios 18-25 m², T1bis 30 m² & T3</span>
           <span class="res-mini-arrow" aria-hidden="true">→</span>
         </a>
         <a href="#residences" class="res-mini-item" onclick="showTab('dutreix')" title="Découvrir la résidence University Dutreix à Limoges">
           <span class="res-mini-icon" aria-hidden="true">🏢</span>
-          <span class="res-mini-text"><strong>University Dutreix</strong>44 studios — Proche IUT &amp; Fac Sciences</span>
+          <span class="res-mini-text"><strong>University Dutreix</strong>45 studios de 25 à 30 m² + 1 T2 de 39 m² — Proche IUT &amp; Fac Sciences</span>
           <span class="res-mini-arrow" aria-hidden="true">→</span>
         </a>
         <a href="#residences" class="res-mini-item" onclick="showTab('emagine')" title="Découvrir la résidence EMagine à Isle près de Limoges">
           <span class="res-mini-icon" aria-hidden="true">🏥</span>
-          <span class="res-mini-text"><strong>EMagine — Isle</strong>Proche CHU · Idéal médecine</span>
+          <span class="res-mini-text"><strong>EMagine — Isle</strong>193 appartements de 20 à 25 m² répartis sur 2 bâtiments — Proche CHU &amp; Médecine</span>
           <span class="res-mini-arrow" aria-hidden="true">→</span>
         </a>
       </div>
@@ -899,7 +899,7 @@
         <div class="res-main-body">
           <p class="res-main-desc">La plus grande résidence étudiante gérée par Begip à Limoges. Studios de 18 à 25 m² et T1bis de 30 m² répartis sur 7 petits bâtiments, et 1 appartement T3 de 72 m², dans un quartier résidentiel, à 15 min à pied des facultés de Sciences, STAPS et de l'IUT, et à 10 min en trolleybus du centre-ville. Tous les logements sont avec mise à disposition de meubles. Kitchenette équipée et placards inclus. Internet WiFi inclus dans le loyer.</p>
           <div class="res-typologies">
-            <div class="typo-row"><span class="typo-name">Studios (×204)</span><span class="typo-surface">18 à 31,75 m²</span><span class="typo-price">350 à 497 €/mois CC</span></div>
+            <div class="typo-row"><span class="typo-name">Studios (×204)</span><span class="typo-surface">18 à 25 m²</span><span class="typo-price">350 à 497 €/mois CC</span></div>
             <div class="typo-row"><span class="typo-name">T1bis</span><span class="typo-surface">30 m²</span><span class="typo-price">482 à 486 €/mois CC</span></div>
             <div class="typo-row"><span class="typo-name">T3 (unique)</span><span class="typo-surface">72 m²</span><span class="typo-price">711 €/mois CC</span></div>
           </div>
@@ -1069,7 +1069,7 @@
         <p class="section-sub reveal">Begip est l'agence immobilière Limougeaude spécialiste du logement étudiant à Limoges depuis plus de 30 ans. De la recherche de votre studio étudiant à votre départ, nous sommes là à chaque étape.</p>
         <div class="begip-services-list">
           <article class="begip-service-item reveal"><span class="bsi-icon" aria-hidden="true">🔍</span><div><h3 class="bsi-title">Recherche et visite personnalisée de résidence étudiante</h3><p class="bsi-desc">Nous vous orientons vers la résidence étudiante la mieux adaptée à votre cursus et budget à Limoges, et organisons les visites.</p></div></article>
-          <article class="begip-service-item reveal"><span class="bsi-icon" aria-hidden="true">📄</span><div><h3 class="bsi-title">Montage de dossier simplifié — dès 130 €</h3><p class="bsi-desc">Sur les résidences gérées en direct par l'agence (Meissonier, Dutreix), le forfait étudiant est de 130 € tout compris : visite, dossier, bail, état des lieux. Pour E-Magine, les conditions sont précisées lors de votre prise de contact.</p></div></article>
+          <article class="begip-service-item reveal"><span class="bsi-icon" aria-hidden="true">📄</span><div><h3 class="bsi-title">Montage de dossier simplifié — dès 130 €</h3><p class="bsi-desc">Sur les résidences gérées en direct par l'agence (Meissonier, Dutreix), le forfait étudiant est de 130 € tout compris : visite, dossier, bail, état des lieux. Pour E-Magine, les honoraires dépendent de la surface de chaque logement et sont fixés par Elyade.</p></div></article>
           <article class="begip-service-item reveal"><span class="bsi-icon" aria-hidden="true">⚡</span><div><h3 class="bsi-title">Réactivité et proximité à Limoges</h3><p class="bsi-desc">Votre agence est à Limoges. Un problème dans votre logement étudiant ? Nous répondons rapidement et traitons localement via notre réseau d'artisans Home Service.</p></div></article>
           <article class="begip-service-item reveal"><span class="bsi-icon" aria-hidden="true">💶</span><div><h3 class="bsi-title">Aide aux démarches CAF (APL/ALS) et Mobili-Jeune</h3><p class="bsi-desc">Nous vous guidons pour obtenir vos aides au logement étudiant (APL/ALS CAF) et l'aide Mobili-Jeune pour les alternants à Limoges.</p></div></article>
         </div>
