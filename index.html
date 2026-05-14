@@ -733,13 +733,13 @@
     }
     .announce-close:hover { color: #fff; }
 
-    nav { top: 42px; }
+    nav[aria-label="Navigation principale"] { top: 42px; }
     .mobile-menu { top: calc(42px + 58px); }
 
     @media (max-width: 560px) {
       .announce-slide { font-size: .72rem; white-space: normal; text-align: center; padding: 0 36px; }
       .announce-bar { height: auto; min-height: 42px; padding: 8px 0; }
-      nav { top: auto; }
+      nav[aria-label="Navigation principale"] { top: auto; }
     }
   </style>
 </head>
@@ -1404,4 +1404,17 @@
 
       // Envoi Google Sheets
       const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxs8YesW21u5Y-wuUlg5-GoiTprz-B7OV33iBTIZzgua6QhjQZf7yw0AobsjGeTg-nyaw/exec';
-      fetch(APPS_SCR
+      fetch(APPS_SCRIPT_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encoded
+      }).catch(() => {});
+
+      // Afficher confirmation et masquer le formulaire
+      residenceForm.style.display = 'none';
+      document.getElementById('residenceConfirmation').style.display = 'block';
+    });
+  }
+</script>
+</body>
+</html>
