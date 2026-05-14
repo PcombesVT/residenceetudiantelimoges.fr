@@ -1289,23 +1289,37 @@
 
 <script>
 
-  // Dropdown menu toggle
-  const dropdown = document.querySelector('.nav-dropdown');
-  if (dropdown) {
+  // Dropdown menu toggle (multi-dropdowns support)
+  const dropdowns = document.querySelectorAll('.nav-dropdown');
+  dropdowns.forEach(dropdown => {
     const trigger = dropdown.querySelector('.nav-dropdown-trigger');
+    if (!trigger) return;
     trigger.addEventListener('click', (e) => {
       e.stopPropagation();
+      // Fermer les autres dropdowns ouverts
+      dropdowns.forEach(other => {
+        if (other !== dropdown) {
+          other.classList.remove('open');
+          const otherTrigger = other.querySelector('.nav-dropdown-trigger');
+          if (otherTrigger) otherTrigger.setAttribute('aria-expanded', 'false');
+        }
+      });
+      // Toggle celui-ci
       dropdown.classList.toggle('open');
       const expanded = dropdown.classList.contains('open');
       trigger.setAttribute('aria-expanded', expanded);
     });
-    document.addEventListener('click', (e) => {
+  });
+  // Fermer tous les dropdowns si clic hors zone
+  document.addEventListener('click', (e) => {
+    dropdowns.forEach(dropdown => {
       if (!dropdown.contains(e.target)) {
         dropdown.classList.remove('open');
-        trigger.setAttribute('aria-expanded', 'false');
+        const trigger = dropdown.querySelector('.nav-dropdown-trigger');
+        if (trigger) trigger.setAttribute('aria-expanded', 'false');
       }
     });
-  }
+  });
 
   // ── BANDEAU ANNONCE ──
   (function() {
