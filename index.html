@@ -441,7 +441,7 @@
     body { font-family: 'Inter', sans-serif; background: var(--warm-white); color: var(--text); overflow-x: hidden; }
 
     /* ── NAV ── */
-    nav {
+    nav[aria-label="Navigation principale"] {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       display: flex; align-items: center; justify-content: space-between;
       padding: 16px 48px;
@@ -449,6 +449,15 @@
       backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(212,165,116,.2);
       animation: slideDown .5s ease both;
+    }
+    /* Override pour empêcher le nav du footer d'être affecté par la règle ci-dessus */
+    footer nav, nav.footer-links {
+      position: static !important;
+      padding: 0 !important;
+      background: transparent !important;
+      backdrop-filter: none !important;
+      border: none !important;
+      animation: none !important;
     }
     @keyframes slideDown { from { transform: translateY(-100%); opacity:0; } to { transform: translateY(0); opacity:1; } }
     .nav-logo { font-family: 'Cormorant Garamond', serif; font-weight: 800; font-size: 1.05rem; color: var(--terracotta); text-decoration: none; letter-spacing: .02em; white-space: nowrap; }
@@ -1395,17 +1404,4 @@
 
       // Envoi Google Sheets
       const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxs8YesW21u5Y-wuUlg5-GoiTprz-B7OV33iBTIZzgua6QhjQZf7yw0AobsjGeTg-nyaw/exec';
-      fetch(APPS_SCRIPT_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: encoded
-      }).catch(() => {});
-
-      // Afficher confirmation et masquer le formulaire
-      residenceForm.style.display = 'none';
-      document.getElementById('residenceConfirmation').style.display = 'block';
-    });
-  }
-</script>
-</body>
-</html>
+      fetch(APPS_SCR
