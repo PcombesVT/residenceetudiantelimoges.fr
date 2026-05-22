@@ -751,7 +751,16 @@
 <nav aria-label="Navigation principale">
   <a href="/" class="nav-logo" title="Résidence étudiante Limoges — Accueil">résidence<em style="color:var(--terracotta);font-style:normal;">étudiante</em><span>limoges.fr</span></a>
   <div class="nav-right">
-    <a href="#residences" class="nav-link">Nos résidences</a>
+    <div class="nav-dropdown">
+      <button class="nav-link nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">Nos résidences <span class="nav-caret">▾</span></button>
+      <div class="nav-dropdown-menu" role="menu">
+        <a href="university-meissonier-limoges.html" role="menuitem">University Meissonier</a>
+        <a href="university-dutreix-limoges.html" role="menuitem">University Dutreix</a>
+        <a href="emagine-residence-etudiante-isle.html" role="menuitem">E-Magine — Isle</a>
+        <a href="residence-universitaire-limoges.html" role="menuitem">Résidences universitaires</a>
+        <a href="vanteaux-residence-limoges.html" role="menuitem">Quartier Vanteaux</a>
+      </div>
+    </div>
     <div class="nav-dropdown">
       <button class="nav-link nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">Sites partenaires <span class="nav-caret">▾</span></button>
       <div class="nav-dropdown-menu" role="menu">
@@ -760,7 +769,7 @@
         <a href="https://emagine-residence.fr" target="_blank" rel="noopener noreferrer" role="menuitem">E-Magine Résidence <span style="opacity:.5">↗</span></a>
       </div>
     </div>
-    <a href="faq-residence-etudiante-limoges.html" class="nav-link">FAQ</a>
+    <a href="faq-residence-etudiante-limoges.html" class="nav-link active">FAQ</a>
     <a href="#contact" class="nav-link nav-cta">Nous contacter</a>
   </div>
   <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="mobileMenu">
@@ -770,10 +779,11 @@
 
 <!-- Menu mobile -->
 <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Menu mobile">
-  <a href="#residences" onclick="closeMenu()">Nos résidences</a>
   <a href="university-meissonier-limoges.html">University Meissonier</a>
   <a href="university-dutreix-limoges.html">University Dutreix</a>
   <a href="emagine-residence-etudiante-isle.html">E-Magine — Isle</a>
+  <a href="residence-universitaire-limoges.html">Résidences universitaires</a>
+  <a href="vanteaux-residence-limoges.html">Quartier Vanteaux</a>
   <a href="faq-residence-etudiante-limoges.html">FAQ logement étudiant</a>
   <a href="#aides" onclick="closeMenu()">Aides &amp; CAF</a>
   <a href="#contact" onclick="closeMenu()">Contact</a>
