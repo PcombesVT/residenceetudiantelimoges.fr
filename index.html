@@ -702,7 +702,7 @@
       position: fixed; top: 0; left: 0; right: 0; z-index: 101;
       background: #1a4a7a;
       border-bottom: 1px solid rgba(212,165,116,.4);
-      height: 42px;
+      height: 56px;
       display: flex; align-items: center; justify-content: center;
       overflow: hidden;
     }
@@ -712,7 +712,7 @@
     }
     .announce-slide {
       position: absolute;
-      font-family: 'Cormorant Garamond', serif; font-size: .9rem;
+      font-family: 'Cormorant Garamond', serif; font-size: 1.05rem;
       font-style: italic;
       font-weight: 500; letter-spacing: .02em;
       color: rgba(255,255,255,.92); text-align: center;
@@ -733,12 +733,12 @@
     }
     .announce-close:hover { color: #fff; }
 
-    nav[aria-label="Navigation principale"] { top: 42px; }
-    .mobile-menu { top: calc(42px + 58px); }
+    nav[aria-label="Navigation principale"] { top: 56px; }
+    .mobile-menu { top: calc(56px + 58px); }
 
     @media (max-width: 560px) {
-      .announce-slide { font-size: .72rem; white-space: normal; text-align: center; padding: 0 36px; }
-      .announce-bar { height: auto; min-height: 42px; padding: 8px 0; }
+      .announce-slide { font-size: .9rem; white-space: normal; text-align: center; padding: 0 36px; }
+      .announce-bar { height: auto; min-height: 54px; padding: 9px 0; }
       nav[aria-label="Navigation principale"] { top: auto; }
     }
   </style>
@@ -747,11 +747,12 @@
 
 <!-- ── BANDEAU ANNONCE ── -->
 <div class="announce-bar" id="announceBar" role="complementary" aria-label="Annonces importantes">
+  <!-- ⚠️ DISPONIBILITÉS — À METTRE À JOUR selon l'état des résidences (rentrée 2026) -->
   <div class="announce-track" id="announceTrack">
-    <div class="announce-slide active">🎓 Rentrée 2026 — Réservez dès maintenant votre résidence étudiante à Limoges</div>
-    <div class="announce-slide">📞 Appelez le 05 55 33 97 50 — Begip répond rapidement à toutes vos demandes</div>
-    <div class="announce-slide">💶 Honoraires Begip réduits étudiants — dès 130 € sur les résidences gérées en direct</div>
-    <div class="announce-slide">✅ Éligible APL ou ALS selon la résidence — L'équipe Begip vous accompagne</div>
+    <div class="announce-slide active">✅ University Meissonier — studios encore disponibles pour la rentrée 2026, réservez vite !</div>
+    <div class="announce-slide">🔴 University Dutreix — résidence complète · inscription en liste d'attente possible</div>
+    <div class="announce-slide">📞 Contactez Begip au 05 55 33 97 50 — l'agence vous répond rapidement</div>
+    <div class="announce-slide">💶 Éligible APL ou ALS — honoraires réduits dès 130 € sur les résidences gérées en direct</div>
   </div>
   <button class="announce-close" onclick="document.getElementById('announceBar').style.display='none'; document.querySelector('nav').style.top='0';" aria-label="Fermer le bandeau d'annonces">✕</button>
 </div>
