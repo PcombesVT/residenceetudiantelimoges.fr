@@ -12,7 +12,9 @@
   <meta name="author" content="Begip — Agence immobilière Limoges" />
   <meta name="theme-color" content="#c4622d" />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>" />
-  <link rel="alternate" hreflang="fr" href="https://www.residenceetudiantelimoges.fr/faq-residence-etudiante-limoges.html" />
+  <link rel="alternate" hreflang="fr" href="https://www.residenceetudiantelimoges.fr/faq-residence-etudiante-limoges" />
+  <link rel="alternate" hreflang="en" href="https://www.residenceetudiantelimoges.fr/en/faq-residence-etudiante-limoges" />
+  <link rel="alternate" hreflang="x-default" href="https://www.residenceetudiantelimoges.fr/faq-residence-etudiante-limoges" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:title" content="FAQ Résidence Étudiante Limoges — Toutes vos questions | Begip" />
@@ -458,6 +460,12 @@
     .nav-link:hover { color: var(--terracotta-light); }
     .nav-cta { background: var(--terracotta); color: var(--dark) !important; padding: 9px 22px; border-radius: 4px; font-weight: 600 !important; transition: background .2s, transform .15s !important; }
     .nav-cta:hover { background: var(--terracotta-light) !important; transform: translateY(-1px); }
+    .lang-switch { display: inline-flex; align-items: center; gap: 6px; font-family: 'Cormorant Garamond', serif; font-size: .8rem; font-weight: 600; }
+    .lang-switch a { color: rgba(255,255,255,.55); text-decoration: none; transition: color .2s; }
+    .lang-switch a.active { color: var(--terracotta-light); }
+    .lang-switch a:hover { color: var(--terracotta); }
+    .lang-switch .sep { color: rgba(255,255,255,.3); }
+    .mobile-menu .mobile-lang { color: var(--terracotta-light) !important; font-weight: 600; }
     /* — Menu déroulant Sites partenaires — */
     .nav-dropdown { position: relative; display: inline-block; }
     .nav-dropdown-trigger { background: none; border: none; cursor: pointer; font-family: 'Cormorant Garamond', serif; font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.6); padding: 0; transition: color .2s; display: inline-flex; align-items: center; gap: 6px; }
@@ -770,6 +778,7 @@
       </div>
     </div>
     <a href="faq-residence-etudiante-limoges" class="nav-link active">FAQ</a>
+    <span class="lang-switch"><a href="/faq-residence-etudiante-limoges" class="active">FR</a><span class="sep">/</span><a href="/en/faq-residence-etudiante-limoges">EN</a></span>
     <a href="#contact" class="nav-link nav-cta">Nous contacter</a>
   </div>
   <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu de navigation" aria-expanded="false" aria-controls="mobileMenu">
@@ -787,6 +796,7 @@
   <a href="faq-residence-etudiante-limoges">FAQ logement étudiant</a>
   <a href="#aides" onclick="closeMenu()">Aides &amp; CAF</a>
   <a href="#contact" onclick="closeMenu()">Contact</a>
+  <a href="/en/faq-residence-etudiante-limoges" class="mobile-lang">🌐 English</a>
   <a href="https://begip.fr" target="_blank" rel="noopener noreferrer" class="mobile-cta">Contacter Begip →</a>
 </div>
 
