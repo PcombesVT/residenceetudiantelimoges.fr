@@ -64,4 +64,54 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- ══════ EN — English versions ══════ -->
+  <url>
+    <loc>https://www.residenceetudiantelimoges.fr/en/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.residenceetudiantelimoges.fr/en/university-meissonier-limoges</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.residenceetudiantelimoges.fr/en/university-dutreix-limoges</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.residenceetudiantelimoges.fr/en/emagine-residence-etudiante-isle</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.residenceetudiantelimoges.fr/en/faq-residence-etudiante-limoges</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.residenceetudiantelimoges.fr/en/residence-universitaire-limoges</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.residenceetudiantelimoges.fr/en/vanteaux-residence-limoges</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.residenceetudiantelimoges.fr/en/limoges-ville-etudiante</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
