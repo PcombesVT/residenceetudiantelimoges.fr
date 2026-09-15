@@ -81,6 +81,7 @@
     body { font-family: 'Inter', sans-serif; background: var(--warm-white); color: var(--text); overflow-x: hidden; }
 
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 16px 48px; background: rgba(20,42,71,.96); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(212,165,116,.2); animation: slideDown .5s ease both; }
+    footer nav, nav.footer-links { position: static !important; padding: 0 !important; background: transparent !important; backdrop-filter: none !important; border: none !important; animation: none !important; }
     @keyframes slideDown { from { transform: translateY(-100%); opacity:0; } to { transform: translateY(0); opacity:1; } }
     .nav-logo { font-family: 'Cormorant Garamond', serif; font-weight: 800; font-size: 1.05rem; color: var(--terracotta); text-decoration: none; white-space: nowrap; }
     .nav-logo span { color: rgba(255,255,255,.55); font-weight: 400; }
@@ -223,7 +224,7 @@
     <a href="/en/residence-universitaire-limoges" class="nav-link">Univ. residences</a>
     <a href="/en/vanteaux-residence-limoges" class="nav-link">Vanteaux</a>
     <span class="lang-switch"><a href="/emagine-residence-etudiante-isle">FR</a><span class="sep">/</span><a href="/en/emagine-residence-etudiante-isle" class="active">EN</a></span>
-    <a href="https://begip.fr" target="_blank" rel="noopener noreferrer" class="nav-link nav-cta">Contact Begip</a>
+    <a href="#contact" class="nav-link nav-cta">Contact Begip</a>
   </div>
   <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
 </nav>
@@ -238,7 +239,7 @@
   <a href="/en/vanteaux-residence-limoges">Vanteaux district</a>
   <a href="/en/#aides">CAF benefit</a>
   <a href="/en/emagine-residence-etudiante-isle" class="mobile-lang">🌐 English</a>
-  <a href="https://begip.fr" target="_blank" rel="noopener noreferrer" class="mobile-cta">Contact Begip →</a>
+  <a href="#contact" class="mobile-cta">Contact Begip →</a>
 </div>
 
 <header class="page-hero" role="banner">
