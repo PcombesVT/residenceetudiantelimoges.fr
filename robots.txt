@@ -1,0 +1,11 @@
+# robots.txt — residenceetudiantelimoges.fr
+# Résidences étudiantes à Limoges gérées par Begip (University Meissonier, University Dutreix, E-Magine Isle)
+
+User-agent: *
+Allow: /
+
+# Exclure la page mentions légales de l'indexation
+Disallow: /mentions-legales.html
+
+# Sitemap
+Sitemap: https://www.residenceetudiantelimoges.fr/sitemap.xml
